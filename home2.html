@@ -10,46 +10,57 @@
     <title>Home 2</title>
     <script>
         function includeHTML() {
-          var z, i, elmnt, file, xhttp;
-          /* Loop through a collection of all HTML elements: */
-          z = document.getElementsByTagName("*");
-          for (i = 0; i < z.length; i++) {
-            elmnt = z[i];
-            /*search for elements with a certain atrribute:*/
-            file = elmnt.getAttribute("w3-include-html");
-            if (file) {
-              /* Make an HTTP request using the attribute value as the file name: */
-              xhttp = new XMLHttpRequest();
-              xhttp.onreadystatechange = function() {
-                if (this.readyState == 4) {
-                  if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-                  if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
-                  /* Remove the attribute, and call this function once more: */
-                  elmnt.removeAttribute("w3-include-html");
-                  includeHTML();
+            var z, i, elmnt, file, xhttp;
+            /* Loop through a collection of all HTML elements: */
+            z = document.getElementsByTagName("*");
+            for (i = 0; i < z.length; i++) {
+                elmnt = z[i];
+                /*search for elements with a certain atrribute:*/
+                file = elmnt.getAttribute("w3-include-html");
+                if (file) {
+                    /* Make an HTTP request using the attribute value as the file name: */
+                    xhttp = new XMLHttpRequest();
+                    xhttp.onreadystatechange = function () {
+                        if (this.readyState == 4) {
+                            if (this.status == 200) { elmnt.innerHTML = this.responseText; }
+                            if (this.status == 404) { elmnt.innerHTML = "Page not found."; }
+                            /* Remove the attribute, and call this function once more: */
+                            elmnt.removeAttribute("w3-include-html");
+                            includeHTML();
+                        }
+                    }
+                    xhttp.open("GET", file, true);
+                    xhttp.send();
+                    /* Exit the function: */
+                    return;
                 }
-              }
-              xhttp.open("GET", file, true);
-              xhttp.send();
-              /* Exit the function: */
-              return;
             }
-          }
         }
-        </script>
+    </script>
 </head>
 
 <body>
-    <div id="home-2">
         <div class="site-header">
             <div class="main-logo">
-                <div class="logo">Beautice</div>
-                <div class="text-nar-home">Home</div>
-                <div class="text-nar">About</div>
-                <div class="text-nar">Services</div>
-                <div class="text-nar">Gallery</div>
-                <div class="text-nar">Blog</div>
-                <button class="button-nar">Contact</button>
+                <a href="./home1.html">
+                    <div class="logo">Beautice</div>
+                </a>
+                <a href="./home2.html">
+                    <div class="text-nar-home">Home</div>
+                </a>
+                <a href="./about.html">
+                    <div class="text-nar">About</div>
+                </a>
+                <a href="./services.html">
+                    <div class="text-nar">Services</div>
+                </a>
+                <a href="./gallery.html">
+                    <div class="text-nar">Gallery</div>
+                </a>
+                <a href="./blog.html">
+                    <div class="text-nar">Blog</div>
+                </a>
+                <a href="./contact.html"><button class="button-nar">Contact</button></a>
             </div>
         </div>
         <div class="main-slider">
@@ -110,24 +121,62 @@
         <div class="why-choosing-us">
             <div class="why-left">
                 <div class="why-title">Why choosing us?</div>
-                 <div class="why-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis.</div>
+                <div class="why-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit
+                    amet luctus venenatis.</div>
             </div>
 
             <div class="why-right">
-                <div class="why-item"><img src="./assets/img/handshake 1.png" alt="">
-                   <div class="why-num">100%</div>
-                   <div class="why-text">trusted clinic</div>
+                <div class="why-item"><img src="./assets/img/trusted clinic.png" alt="">
                 </div>
-                <div class="why-item"><img src="./assets/img/brotherhood 1.png" alt=""></div>
-                <div class="why-item"><img src="./assets/img/earth 1.png" alt=""></div>
-                <div class="why-item"><img src="./assets/img/doctor 1.png" alt="">
-                
+                <div class="why-item"><img src="./assets/img/customer love.png" alt=""></div>
+                <div class="why-item"><img src="./assets/img/asian branch.png" alt=""></div>
+                <div class="why-item"><img src="./assets/img/licensed worker.png" alt="">
+
                 </div>
+
             </div>
 
         </div>
-    </div>
-   
+        
+        <div class="footer">
+            <div class="left-footer">
+                       <div class="title-footer">Beautice</div>
+                       <div class="content-footer"><b>Beautice</b> is a Beauty Clinic WordPress Theme.</div>
+                       <div class="address">Baker Steet 101, NY, United States.</div>
+                       <div class="infor">
+                        <div class="address">+521 569 8966.</div>
+                        <div class="address email">mail@company.com.</div>
+                       </div>
+
+            </div>
+            <div class="mid-footer">
+                <div class="title-page">Pages</div>
+                <div class="item-page"><img src="./assets/img/caret-right.png" alt=""> Home</div>
+                <div class="item-page"><img src="./assets/img/caret-right.png" alt=""> About</div>
+                <div class="item-page"><img src="./assets/img/caret-right.png" alt=""> Services</div>
+                <div class="item-page"><img src="./assets/img/caret-right.png" alt=""> Gallery</div>
+                <div class="item-page"><img src="./assets/img/caret-right.png" alt=""> Team</div>
+            </div>
+            <div class="right-footer mid-footer">
+                <div class="title-page"> Information</div>
+                <div class="item-page"><img src="./assets/img/caret-right.png" alt=""> Terms & Conditions</div>
+                <div class="item-page"><img src="./assets/img/caret-right.png" alt=""> Condivacy Policy</div>
+                <div class="item-page"><img src="./assets/img/caret-right.png" alt=""> Blog</div>
+                <div class="item-page"><img src="./assets/img/caret-right.png" alt=""> Contact</div>
+                <button class="arrow-top"><img src="./assets/img/arrow.png" alt="arrow-top"></button>
+            </div>
+        </div>
+        <div class="bottom-footer">
+        <div class="icon-bf">
+            <button><img src="./assets/img/facebook-f.png" alt="fb"></button>
+            <button><img src="./assets/img/Vector-3.png" alt="tw"></button>
+            <button><img src="./assets/img/Vector-2.png" alt="in"></button>
+            <button><img src="./assets/img/Vector-1.png" alt="ytb"></button>
+            <button><img src="./assets/img/Vector.png" alt="ins"></button>
+        </div>
+        <div class="text-bf">© AltDesain Studio 2021 - All right reserved.</div>
+        </div>
+
 </body>
 
 </html>

@@ -23,7 +23,7 @@
         <div class="item-page"><img src="./assets/img/caret-right.png" alt=""> Condivacy Policy</div>
         <div class="item-page"><img src="./assets/img/caret-right.png" alt=""> Blog</div>
         <div class="item-page"><img src="./assets/img/caret-right.png" alt=""> Contact</div>
-        <button class="arrow-top"><img src="./assets/img/arrow.png" alt="arrow-top"></button>
+        <button class="arrow-top" onclick="topFunction()" id="myBtn" title="Go to top"><img src="./assets/img/arrow.png" alt="arrow-top"></button>
     </div>
 </div>
 <div class="bottom-footer">
@@ -162,7 +162,14 @@
         border-radius: 5px;
         border: none;
         margin-top: 65px;
-        float: right;
+        position: fixed;
+        z-index: 10;
+        top: 80%;
+        right: 5%;
+        opacity: 0.5;
     }
-
+    .arrow-top:hover {
+        transition: 0.3s;
+        opacity:unset;
+    }
 </style>

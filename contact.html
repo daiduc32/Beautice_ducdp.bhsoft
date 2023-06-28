@@ -1,38 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-    <script>
-        function includeHTML() {
-          var z, i, elmnt, file, xhttp;
-          /*loop through a collection of all HTML elements:*/
-          z = document.getElementsByTagName("*");
-          for (i = 0; i < z.length; i++) {
-            elmnt = z[i];
-            /*search for elements with a certain attribute:*/
-            file = elmnt.getAttribute("w3-include-html");
-            if (file) {
-              /*make an HTTP request using the attribute value as the file name:*/
-              xhttp = new XMLHttpRequest();
-              xhttp.onreadystatechange = function() {
-                if (this.readyState == 4) {
-                  if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-                  if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
-                  /*remove the attribute, and call this function once more:*/
-                  elmnt.removeAttribute("w3-include-html");
-                  includeHTML();
-                }
-              }      
-              xhttp.open("GET", file, true);
-              xhttp.send();
-              /*exit the function:*/
-              return;
-            }
-          }
-        };
-        function successAlert() {
-            alert(" Gửi contact thành công !");
-        }
-        </script>
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -46,29 +13,29 @@
 <div class="bg-bubble"></div>
     <div class="gallery">
         <div class="site-header">
-            <div class="main-logo">
+            <a href="./home1.html"><div class="main-logo">
                 <div class="img-logo"> <img src="./assets/img/Main Logo.svg" alt="logo"> </div>
                 <div class="beautice2">
                     Beautice</div>
-            </div>
+            </div></a>
 
             <div class="main-menu">
-                <div class="blog2">Blog</div>
+                <a href="./blog.html"><div class="blog2">Blog</div></a>
 
-                <div class="gallery3">Gallery</div>
+                <a href="./gallery.html"><div class="gallery3">Gallery</div></a>
 
-                <div class="service">Service</div>
+                <a href="./services.html"><div class="service">Service</div></a>
 
-                <div class="about3">About</div>
+               <a href="./about.html"> <div class="about3">About</div></a>
 
                 <div class="home3">
-                    <div class="home4">Home</div>
+                    <a href="./home2.html"><div class="home4">Home</div></a>
                 </div>
 
                 <div class="contact-button">
                     <div class="button-bg2"></div>
 
-                    <div class="contact3">Contact</div>
+                    <a href="./contact.html"><div class="contact3">Contact</div></a>
                 </div>
 
             </div>
@@ -148,7 +115,7 @@
     </div>
 
     <div w3-include-html="./footer.html"></div> 
-
+    <script src="./assets/home.js"></script>
     <script>
     includeHTML();
     </script>

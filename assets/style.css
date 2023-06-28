@@ -13,6 +13,10 @@ body {
   display: flex;
   padding: 25px;
 }
+
+.main-logo a {
+ text-decoration: none;
+}
 .text-nar {
   font-style: normal;
   font-weight: 400;

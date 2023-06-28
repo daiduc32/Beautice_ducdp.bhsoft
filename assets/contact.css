@@ -370,6 +370,9 @@ body {
 /* R */
 
 @media screen and (max-width: 320px) {
+  body {
+    font-size: 12px;
+  }
   .contact {
     width: 100%;
     display: inline;
@@ -708,3 +711,5 @@ align-items: center;
 .margin-top {
   margin-top : 100px;
 }
+
+
