@@ -1,0 +1,535 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", serif;
+}
+.main-logo {
+  display: flex;
+  padding: 25px;
+}
+.text-nar {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  margin: 0 12px 0 32px;
+  color: #ffffff;
+  line-height: 36px;
+}
+
+.text-nar-home {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  margin: 0 12px 0 222px;
+  color: #ffffff;
+  line-height: 36px;
+}
+.logo {
+  margin-left: 107px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 36px;
+  color: #ffffff;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.button-nar {
+  border: none;
+  margin-left: 175px;
+  width: 141px;
+  font-weight: 600;
+  height: 50px;
+  margin-top: -10px;
+  background: #ff64ae;
+  border-radius: 50px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Silder  */
+.main-slider {
+  background-image: url(./img/Rectangle\ 17.png), url(./img/bg-home2.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  width: 100%;
+  height: 918px;
+  left: 0px;
+  top: 0px;
+  z-index: -1;
+  display: flex;
+  justify-content: space-between;
+}
+
+.left-slider {
+  color: white;
+}
+
+.title-text {
+  position: absolute;
+  width: 502px;
+  height: 133px;
+  left: 150px;
+  top: 307px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 125%;
+}
+.content-text {
+  position: absolute;
+  width: 501px;
+  height: 78px;
+  left: 150px;
+  top: 440px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.1em;
+  color: #d8dcff;
+}
+
+.main-slider button {
+  position: absolute;
+  width: 179px;
+  height: 52px;
+  left: 150px;
+  top: 552px;
+  box-sizing: border-box;
+  border: 1px solid #ffffff;
+  border-radius: 15px;
+  background-color: #ffffff00;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.right-slider {
+  display: flex;
+  position: absolute;
+  width: 275px;
+  height: 127px;
+  left: 870px;
+  top: 391px;
+}
+
+.right-slider p {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.1em;
+  color: #ffffff;
+  line-height: 123px;
+  margin: 0 auto;
+}
+
+.about-us {
+  position: absolute;
+  width: 1140px;
+  height: 359.36px;
+  left: 150px;
+  top: 1076px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 16px;
+  color: #ff64ae;
+}
+.contact-us {
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 45px;
+  color: #091156;
+  margin: 15px 0 15px 0;
+}
+
+.text-small-us {
+  position: relative;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.1em;
+  color: #8b8b8b;
+  word-break: break-word;
+}
+.right-us {
+  margin-left: 10%;
+}
+
+.right-us button {
+  margin-top: 25px;
+  border: none;
+  width: 141px;
+  font-weight: 600;
+  height: 50px;
+  background: #ff64ae;
+  border-radius: 50px;
+  color: white;
+  cursor: pointer;
+}
+
+.right-us button:hover {
+  background: #ff3496;
+}
+
+/* Services */
+.main-services {
+  position: absolute;
+  width: 100%;
+  height: 685.34px;
+  left: 0px;
+  top: 1500px;
+}
+.text-services {
+  text-align: center;
+}
+
+.flex-item {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.item {
+  margin-top: 5%;
+  width: 261px;
+  height: 303px;
+  background: #ffffff;
+  border: 1px solid #e2e2e2;
+  border-radius: 25px;
+  padding: 30px;
+}
+
+.title-item {
+  margin-top: 20px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 125%;
+  color: #091156;
+}
+
+.content-item {
+  margin-top: 20px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: 0.1em;
+  color: #8b8b8b;
+}
+
+.details-item {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 125%;
+  color: #ff64ae;
+}
+
+.details-item img {
+  margin-left: 7px;
+}
+
+.light {
+  border: 2px solid #c8c8c8;
+}
+
+.why-choosing-us {
+  position: absolute;
+  width: 100%;
+  height: 697.5px;
+  left: 0px;
+  top: 2222px;
+  background-image: url(./img/bg-why-choosing-us.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: space-between;
+}
+
+.why-left {
+  padding: 150px;
+  width: 50%;
+  margin: 10% 0 0 5%;
+}
+
+.why-title {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 125%;
+  color: #ffffff;
+}
+
+.why-content {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.1em;
+  color: #d8dcff;
+  margin: 25px 0 25px 0;
+}
+
+.why-right {
+  height: 697.5px;
+  left: 0px;
+  top: 3222px;
+  display: grid;
+  grid-template-columns: repeat(2, 200px);
+  column-gap: 10px;
+  row-gap: 1em;
+  padding: 150px;
+  width: 50%;
+  margin-top: 10%;
+}
+.why-item {
+}
+
+.why-num {
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 125%;
+  color: #ffffff;
+
+}
+
+
+.the-blog,
+.the-blog * {
+  box-sizing: border-box;
+}
+.the-blog {
+  position: absolute;
+  inset: 0;
+}
+.blog-3 {
+  width: 347px;
+  height: 543px;
+  position: static;
+}
+.background {
+  background: #ffffff;
+  border-radius: 25px;
+  width: 347px;
+  height: 543px;
+  position: absolute;
+  left: 943px;
+  top: 3237px;
+  box-shadow: 0px 25px 50px 5px rgba(246, 247, 255, 1);
+}
+.learn-more-button {
+  width: 106px;
+  height: 19px;
+  position: static;
+}
+.angle-double-right {
+  position: absolute;
+  left: 1071px;
+  top: 3690px;
+  overflow: visible;
+}
+.learn-more {
+  color: #ff64ae;
+  text-align: left;
+  font: 600 14px/125% "Poppins", sans-serif;
+  position: absolute;
+  left: 981px;
+  top: 3689px;
+  width: 90px;
+  height: 19px;
+}
+.a-wonderful-serenity-has-taken-possession-of-my-entire-soul-like-these-sweet-mornings {
+  color: #8b8b8b;
+  text-align: left;
+  font: 400 14px "Poppins", sans-serif;
+  position: absolute;
+  left: 981px;
+  top: 3600px;
+  width: 271px;
+  height: 74px;
+}
+.about-skin-care-you-need-to-know {
+  color: #091156;
+  text-align: left;
+  font: 600 18px/125% "Poppins", sans-serif;
+  position: absolute;
+  left: 981px;
+  top: 3542px;
+  width: 271px;
+  height: 58px;
+}
+.unsplash-0-mc-yfdy-eda {
+  background: linear-gradient(to left, #c4c4c4, #c4c4c4);
+  border-radius: 25px 25px 0px 0px;
+  width: 347px;
+  height: 249px;
+  position: absolute;
+  left: 943px;
+  top: 3237px;
+}
+.blog-2 {
+  width: 347px;
+  height: 543px;
+  position: static;
+}
+.background2 {
+  background: #ffffff;
+  border-radius: 25px;
+  width: 347px;
+  height: 543px;
+  position: absolute;
+  left: 547px;
+  top: 3237px;
+  box-shadow: 0px 25px 50px 5px rgba(246, 247, 255, 1);
+}
+.angle-double-right2 {
+  position: absolute;
+  left: 675px;
+  top: 3690px;
+  overflow: visible;
+}
+.learn-more2 {
+  color: #ff64ae;
+  text-align: left;
+  font: 600 14px/125% "Poppins", sans-serif;
+  position: absolute;
+  left: 585px;
+  top: 3689px;
+  width: 90px;
+  height: 19px;
+}
+.a-wonderful-serenity-has-taken-possession-of-my-entire-soul-like-these-sweet-mornings2 {
+  color: #8b8b8b;
+  text-align: left;
+  font: 400 14px "Poppins", sans-serif;
+  position: absolute;
+  left: 585px;
+  top: 3600px;
+  width: 271px;
+  height: 74px;
+}
+.watch-out-don-t-choose-the-wrong-beauty-product {
+  color: #091156;
+  text-align: left;
+  font: 600 18px/125% "Poppins", sans-serif;
+  position: absolute;
+  left: 585px;
+  top: 3542px;
+  width: 271px;
+  height: 58px;
+}
+.unsplash-7-t-d-gb-3-hr-i-tg {
+  background: linear-gradient(to left, #c4c4c4, #c4c4c4);
+  border-radius: 25px 25px 0px 0px;
+  width: 347px;
+  height: 249px;
+  position: absolute;
+  left: 547px;
+  top: 3237px;
+}
+.blog-1 {
+  width: 347px;
+  height: 543px;
+  position: static;
+}
+.background3 {
+  background: #ffffff;
+  border-radius: 25px;
+  width: 347px;
+  height: 543px;
+  position: absolute;
+  left: 151px;
+  top: 3237px;
+  box-shadow: 0px 25px 50px 5px rgba(246, 247, 255, 1);
+}
+.angle-double-right3 {
+  position: absolute;
+  left: 279px;
+  top: 3690px;
+  overflow: visible;
+}
+.learn-more3 {
+  color: #ff64ae;
+  text-align: left;
+  font: 600 14px/125% "Poppins", sans-serif;
+  position: absolute;
+  left: 189px;
+  top: 3689px;
+  width: 90px;
+  height: 19px;
+}
+.a-wonderful-serenity-has-taken-possession-of-my-entire-soul-like-these-sweet-mornings3 {
+  color: #8b8b8b;
+  text-align: left;
+  font: 400 14px "Poppins", sans-serif;
+  position: absolute;
+  left: 189px;
+  top: 3600px;
+  width: 271px;
+  height: 74px;
+}
+.how-much-does-a-consultation-cost-at-our-clinic {
+  color: #091156;
+  text-align: left;
+  font: 600 18px/125% "Poppins", sans-serif;
+  position: absolute;
+  left: 189px;
+  top: 3542px;
+  width: 288px;
+  height: 58px;
+}
+.unsplash-3-ewk-nkf-jj-2-k {
+  background: linear-gradient(to left, #c4c4c4, #c4c4c4);
+  border-radius: 25px 25px 0px 0px;
+  width: 347px;
+  height: 249px;
+  position: absolute;
+  left: 151px;
+  top: 3237px;
+}
+.tittle-desc {
+  width: 848px;
+  height: 128px;
+  position: static;
+}
+.lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit {
+  color: #8b8b8b;
+  text-align: center;
+  font: 400 16px "Poppins", sans-serif;
+  position: absolute;
+  left: 296px;
+  top: 3124px;
+  width: 848px;
+  height: 34px;
+}
+.our-latest-news {
+  color: #091156;
+  text-align: center;
+  font: 600 36px/125% "Poppins", sans-serif;
+  position: absolute;
+  left: 445px;
+  top: 3062px;
+  width: 551px;
+  height: 50px;
+}
+.the-blog2 {
+  color: #ff64ae;
+  text-align: center;
+  font: 600 16px/125% "Poppins", sans-serif;
+  position: absolute;
+  left: 685px;
+  top: 3030px;
+}

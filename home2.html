@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/style2.css">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Poppins" />
+    <title>Home 2</title>
+    <script>
+        function includeHTML() {
+          var z, i, elmnt, file, xhttp;
+          /* Loop through a collection of all HTML elements: */
+          z = document.getElementsByTagName("*");
+          for (i = 0; i < z.length; i++) {
+            elmnt = z[i];
+            /*search for elements with a certain atrribute:*/
+            file = elmnt.getAttribute("w3-include-html");
+            if (file) {
+              /* Make an HTTP request using the attribute value as the file name: */
+              xhttp = new XMLHttpRequest();
+              xhttp.onreadystatechange = function() {
+                if (this.readyState == 4) {
+                  if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+                  if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+                  /* Remove the attribute, and call this function once more: */
+                  elmnt.removeAttribute("w3-include-html");
+                  includeHTML();
+                }
+              }
+              xhttp.open("GET", file, true);
+              xhttp.send();
+              /* Exit the function: */
+              return;
+            }
+          }
+        }
+        </script>
+</head>
+
+<body>
+    <div id="home-2">
+        <div class="site-header">
+            <div class="main-logo">
+                <div class="logo">Beautice</div>
+                <div class="text-nar-home">Home</div>
+                <div class="text-nar">About</div>
+                <div class="text-nar">Services</div>
+                <div class="text-nar">Gallery</div>
+                <div class="text-nar">Blog</div>
+                <button class="button-nar">Contact</button>
+            </div>
+        </div>
+        <div class="main-slider">
+            <div class="left-slider">
+                <div class="title-text">Your beauty center place</div>
+                <div class="content-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Commodo, massa
+                    pellentesque arcu fusce et magna consequat neque vitae lobortis.</div>
+            </div>
+            <button>More Details</button>
+            <div class="right-slider">
+                <img src="./assets/img/Play Button.png" alt="">
+                <p> Tour Video</p>
+            </div>
+        </div>
+        <div class="about-us">
+            <div class="left-us">
+                <img src="./assets/img/face-qr.png" alt="">
+            </div>
+            <div class="right-us">
+                <div class="title">About us</div>
+                <div class="contact-us">We are the best beauty clinic</div>
+                <div class="text-small-us">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit, quam suscipit
+                    purus donec amet. Egestas volutpat facilisi eu libero. Nunc, ipsum ornare mauris sit quam quis enim.
+                    Varius tellus in suspendisse placerat.</div>
+                <button>Learn More</button>
+            </div>
+        </div>
+
+        <div class="main-services">
+            <div class="text-services">
+                <div class="title">Main Services</div>
+                <div class="contact-us">Our focus services</div>
+                <div class="text-small-us">Lorem ipsum dolor sit amet.</div>
+            </div>
+            <div class="flex-item">
+                <div class="item">
+                    <img src="./assets/img/icon-1.png" alt="">
+                    <div class="title-item">Beauty consultation</div>
+                    <div class="content-item">Lorem ipsum dolor sit amet, consectetur adipiscing. </div>
+                    <div class="details-item">Learn more <img src="./assets/img/angle-double-right.png" alt=""></div>
+                </div>
+                <div class="item light">
+                    <img src="./assets/img/icon-2.png" alt="">
+                    <div class="title-item">Skin treatments</div>
+                    <div class="content-item">Lorem ipsum dolor sit amet, consectetur adipiscing. </div>
+                    <div class="details-item">Learn more <img src="./assets/img/angle-double-right.png" alt=""></div>
+                </div>
+
+                <div class="item">
+                    <img src="./assets/img/icon-3.png" alt="">
+                    <div class="title-item">Beauty product</div>
+                    <div class="content-item">Lorem ipsum dolor sit amet, consectetur adipiscing. </div>
+                    <div class="details-item">Learn more <img src="./assets/img/angle-double-right.png" alt=""></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="why-choosing-us">
+            <div class="why-left">
+                <div class="why-title">Why choosing us?</div>
+                 <div class="why-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis.</div>
+            </div>
+
+            <div class="why-right">
+                <div class="why-item"><img src="./assets/img/handshake 1.png" alt="">
+                   <div class="why-num">100%</div>
+                   <div class="why-text">trusted clinic</div>
+                </div>
+                <div class="why-item"><img src="./assets/img/brotherhood 1.png" alt=""></div>
+                <div class="why-item"><img src="./assets/img/earth 1.png" alt=""></div>
+                <div class="why-item"><img src="./assets/img/doctor 1.png" alt="">
+                
+                </div>
+            </div>
+
+        </div>
+    </div>
+   
+</body>
+
+</html>

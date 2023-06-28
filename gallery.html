@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<script>
+    function includeHTML() {
+        var z, i, elmnt, file, xhttp;
+        /*loop through a collection of all HTML elements:*/
+        z = document.getElementsByTagName("*");
+        for (i = 0; i < z.length; i++) {
+            elmnt = z[i];
+            /*search for elements with a certain attribute:*/
+            file = elmnt.getAttribute("w3-include-html");
+            if (file) {
+                /*make an HTTP request using the attribute value as the file name:*/
+                xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function () {
+                    if (this.readyState == 4) {
+                        if (this.status == 200) { elmnt.innerHTML = this.responseText; }
+                        if (this.status == 404) { elmnt.innerHTML = "Page not found."; }
+                        /*remove the attribute, and call this function once more:*/
+                        elmnt.removeAttribute("w3-include-html");
+                        includeHTML();
+                    }
+                }
+                xhttp.open("GET", file, true);
+                xhttp.send();
+                /*exit the function:*/
+                return;
+            }
+        }
+    };
+</script>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/contact.css">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Poppins" />
+    <title>Gallery</title>
+</head>
+
+<body>
+
+    <div class="gallery">
+        <div class="site-header">
+            <div class="main-logo">
+                <div class="img-logo"> <img src="./assets/img/Main Logo.svg" alt="logo"> </div>
+                <div class="beautice2">
+                    Beautice</div>
+            </div>
+
+            <div class="main-menu">
+                <div class="blog2">Blog</div>
+
+                <div class="gallery3">Gallery</div>
+
+                <div class="service">Service</div>
+
+                <div class="about3">About</div>
+
+                <div class="home3">
+                    <div class="home4">Home</div>
+                </div>
+
+                <div class="contact-button">
+                    <div class="button-bg2"></div>
+
+                    <div class="contact3">Contact</div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="sec-gallery">
+        <div class="text-sec-gallery">
+            <div class="sec-left">
+                <div class="title-lc">Our Gallery</div>
+                <div class="content-lc">Check out the collection pictures from our clinic</div>
+            </div>
+            <div class="sec-right">
+                <div class="tsmall-rc">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit
+                    amet luctus venenatis</div>
+            </div>
+        </div>
+
+        <div class="grid-container">
+            <div class="grid-item"><img src="./assets/img/unsplash_FVh_yqLR9eA.png" alt=""></div>
+            <div class="grid-item"><img src="./assets/img/unsplash_3ewkNkfJj2k.png" alt=""></div>
+            <div class="grid-item"><img src="./assets/img/unsplash_xayCTz6N2nM.png" alt=""></div>
+            <div class="grid-item"><img src="./assets/img/unsplash_Pe9IXUuC6QU.png" alt=""></div>
+            <div class="grid-item"><img src="./assets/img/unsplash_fvInY-Gh7sc.png" alt=""></div>
+            <div class="grid-item"><img src="./assets/img/unsplash_HEde-a_T4E8.png" alt=""></div>
+            <div class="grid-item"><img src="./assets/img/unsplash_9Wa1HgE1XlA.png" alt=""></div>
+            <div class="grid-item"><img src="./assets/img/unsplash_PqyzuzFiQfY.png" alt=""></div>
+            <div class="grid-item"><img src="./assets/img/unsplash_4SUyx4KQ5Ik.png" alt=""></div>
+        </div>
+    </div>
+    <div class="tsmall-rc out">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus
+        venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non enim, <b>
+            <font color="#091156">our teams.</font>
+        </b></div>
+
+
+    <div class="section-item-tour">
+        <div class="text-title-tour">Watch the video tour</div>
+        <div class="text-content-tour">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit
+            amet luctus venenatis</div>
+        <img src="./assets/img/Play Button.png" alt="">
+    </div>
+    <div class="quota">
+        <div class="group-quota">
+            <div class="quota-left">
+                <div class="title-lc">Get The Quota</div>
+                <div class="content-lc">Want to be handled by our professional team immediately?</div>
+                <div class="tsmall-rc"> Id dui erat sed quam tellus in purus. Pellentesque congue fringilla cras tellus enim.</div>
+            </div>
+            <div class="quota-right">
+                <div class="contact-button margin-top">
+                    <div class="button-bg2 margin-top"></div>
+
+                    <div class="contact3 margin-top">Contact</div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <!-- Include Footer -->
+    <div w3-include-html="./footer.html"></div>
+
+    <script>
+        includeHTML();
+    </script>
+</body>
+
+</html>

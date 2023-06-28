@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+    <script>
+        function includeHTML() {
+          var z, i, elmnt, file, xhttp;
+          /*loop through a collection of all HTML elements:*/
+          z = document.getElementsByTagName("*");
+          for (i = 0; i < z.length; i++) {
+            elmnt = z[i];
+            /*search for elements with a certain attribute:*/
+            file = elmnt.getAttribute("w3-include-html");
+            if (file) {
+              /*make an HTTP request using the attribute value as the file name:*/
+              xhttp = new XMLHttpRequest();
+              xhttp.onreadystatechange = function() {
+                if (this.readyState == 4) {
+                  if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+                  if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+                  /*remove the attribute, and call this function once more:*/
+                  elmnt.removeAttribute("w3-include-html");
+                  includeHTML();
+                }
+              }      
+              xhttp.open("GET", file, true);
+              xhttp.send();
+              /*exit the function:*/
+              return;
+            }
+          }
+        };
+        function successAlert() {
+            alert(" Gửi contact thành công !");
+        }
+        </script>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, 
+    initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/contact.css">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Poppins" />
+    <title>Services</title>
+    
+</head>
+    <div class="gallery">
+        <div class="site-header">
+            <div class="main-logo">
+                <div class="img-logo"> <img src="./assets/img/Main Logo.svg" alt="logo"> </div>
+                <div class="beautice2">
+                    Beautice</div>
+            </div>
+
+            <div class="main-menu">
+                <div class="blog2">Blog</div>
+
+                <div class="gallery3">Gallery</div>
+
+                <div class="service">Service</div>
+
+                <div class="about3">About</div>
+
+                <div class="home3">
+                    <div class="home4">Home</div>
+                </div>
+
+                <div class="contact-button">
+                    <div class="button-bg2"></div>
+
+                    <div class="contact3">Contact</div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="text-sci">
+        <div class="title-lc">Our Services</div>
+        <div class="content-lc">We focus on your beauty</div>
+        <div class="tsmall-rc">Lorem ipsum dolor sit amet.</div>
+    </div>
+
+    <div class="section-our-services">
+    <div class="grid-item-services"><img src="./assets/img/unsplash_5TJ0Hoy5FLY.png" alt=""></div>
+    <div class="grid-item-services"><img src="./assets/img/unsplash_ZOT2Mewzmh8.png" alt=""></div>
+    <div class="grid-item-services"><img src="./assets/img/unsplash_gzfIO69Q6eM.png" alt=""></div>
+    <div class="grid-item-services"><img src="./assets/img/unsplash_pTrhfmj2jDA.png" alt=""></div>
+    </div>
+
+    <div class="consultation">
+        <div class="left-consul">
+            <img src="./assets/img/Animation1.png" alt="">
+        </div>
+        <div class="right-consul">
+            <div class="title-lc">Get The Quota</div>
+                <div class="content-lc">Want to be handled by our professional team immediately?</div>
+                <div class="tsmall-rc"> Id dui erat sed quam tellus in purus. Pellentesque congue fringilla cras tellus enim.</div>
+                <div class="btn-show-more">Make an Appointment <img src="./assets/img/angle-double-right.png" alt=""></div>
+        </div>
+    </div>
+    <div class="consultation flex-direction">
+        <div class="left-consul">
+            <img src="./assets/img/Animation2.png" alt="">
+        </div>
+        <div class="right-consul">
+            <div class="title-lc">Skin Treatements</div>
+                <div class="content-lc">Skin care and
+                    treatment by expert</div>
+                <div class="tsmall-rc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit, quam suscipit purus donec amet. Egestas volutpat facilisi eu libero.</div>
+                <div class="btn-show-more">Make an Appointment <img src="./assets/img/angle-double-right.png" alt=""></div>
+        </div>
+    </div>
+
+    <div class="consultation">
+        <div class="left-consul">
+            <img src="./assets/img/Animation3.png" alt="">
+        </div>
+        <div class="right-consul">
+            <div class="title-lc">Beauty Product</div>
+                <div class="content-lc">We present quality beauty products</div>
+                <div class="tsmall-rc"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit, quam suscipit purus donec amet. Egestas volutpat facilisi eu libero.</div>
+                <div class="btn-show-more">Make an Appointment <img src="./assets/img/angle-double-right.png" alt=""></div>
+        </div>
+    </div>
+
+<div class="section-slogan">
+        <div class="left-section-slogan">
+            <div class="title-text-slogan">Best responsibility and service
+                for our customerse</div>
+            <div class="content-text-slogan">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis.</div>
+        </div>
+        <div class="right-section-slogan">
+            <img src="./assets/img/Play Button.png" alt="">
+            <p>Treatments Videos</p>
+        </div>
+</div>
+
+   <div class="section-faq">
+    <div class="content-lc" style="text-align: center;">Services FAQ’s</div>
+    <div class="line-title"></div>
+    <div class="faq1">
+        <div class="text-faq1">Is beauty consultation handled thoroughly? <img src="./assets/img/angle-up.png" alt=""></div>
+    </div>
+    <div class="box-faq">
+            <div class="text-box-faq">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna </div>
+
+            <div class="text-box-faq">porttitor rhoncus dolor purus non enim praesent elementum facilisis leo, vel fringilla est ullamcorper eget nulla</div>
+            
+    </div>
+    
+    <div class="question">Is beauty consultation handled thoroughly? <button onclick="btnShow()"><img src="./assets/img/angle-down.png" alt=""></button></div>
+    <div class="box-faq hide" id="hide">
+        <div class="text-box-faq">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna </div>
+
+        <div class="text-box-faq">porttitor rhoncus dolor purus non enim praesent elementum facilisis leo, vel fringilla est ullamcorper eget nulla</div>
+        
+</div>
+    <div class="question">Are there any side effects to the treatment methods or treatments at this clinic? <button onclick="btnShow1()"><img src="./assets/img/angle-down.png" alt=""></button></div>
+    <div class="box-faq hide" id="hide1">
+        <div class="text-box-faq">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna </div>
+
+        <div class="text-box-faq">porttitor rhoncus dolor purus non enim praesent elementum facilisis leo, vel fringilla est ullamcorper eget nulla</div>
+        
+</div>
+    
+    <div class="question">Do professionals have accreditation in their respective fields? <button onclick="btnShow2()"><img src="./assets/img/angle-down.png" alt=""></button></div>
+    <div class="box-faq hide" id="hide2">
+        <div class="text-box-faq">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna </div>
+
+        <div class="text-box-faq">porttitor rhoncus dolor purus non enim praesent elementum facilisis leo, vel fringilla est ullamcorper eget nulla</div>
+        
+</div>
+    
+    </div>
+    
+    <div w3-include-html="./footer.html"></div> 
+
+    <script>
+    includeHTML();
+    </script>
+<script>
+    function btnShow() {
+        var x = document.getElementById("hide");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+
+        } else {
+          x.style.display = "none";
+        }
+      }
+      function btnShow1() {
+        var x = document.getElementById("hide1");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+
+        } else {
+          x.style.display = "none";
+        }
+      }
+      function btnShow2() {
+        var x = document.getElementById("hide2");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+
+        } else {
+          x.style.display = "none";
+        }
+      }
+</script>
+
+</body>
+
+</html>

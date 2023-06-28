@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+    <script>
+        function includeHTML() {
+          var z, i, elmnt, file, xhttp;
+          /*loop through a collection of all HTML elements:*/
+          z = document.getElementsByTagName("*");
+          for (i = 0; i < z.length; i++) {
+            elmnt = z[i];
+            /*search for elements with a certain attribute:*/
+            file = elmnt.getAttribute("w3-include-html");
+            if (file) {
+              /*make an HTTP request using the attribute value as the file name:*/
+              xhttp = new XMLHttpRequest();
+              xhttp.onreadystatechange = function() {
+                if (this.readyState == 4) {
+                  if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+                  if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+                  /*remove the attribute, and call this function once more:*/
+                  elmnt.removeAttribute("w3-include-html");
+                  includeHTML();
+                }
+              }      
+              xhttp.open("GET", file, true);
+              xhttp.send();
+              /*exit the function:*/
+              return;
+            }
+          }
+        };
+        function successAlert() {
+            alert(" Gửi contact thành công !");
+        }
+        </script>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, 
+    initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/contact.css">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Poppins" />
+    <title>Contact</title>
+    
+</head>
+<div class="bg-bubble"></div>
+    <div class="gallery">
+        <div class="site-header">
+            <div class="main-logo">
+                <div class="img-logo"> <img src="./assets/img/Main Logo.svg" alt="logo"> </div>
+                <div class="beautice2">
+                    Beautice</div>
+            </div>
+
+            <div class="main-menu">
+                <div class="blog2">Blog</div>
+
+                <div class="gallery3">Gallery</div>
+
+                <div class="service">Service</div>
+
+                <div class="about3">About</div>
+
+                <div class="home3">
+                    <div class="home4">Home</div>
+                </div>
+
+                <div class="contact-button">
+                    <div class="button-bg2"></div>
+
+                    <div class="contact3">Contact</div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <div class="contact">
+        <div class="contact-left">
+            <div class="title-lc">Contact Us</div>
+            <div class="content-lc">Contact service for our customers</div>
+            <div class="img-lc"><img src="./assets/img/Contact Animations.png" alt=""></div>
+        </div>
+        <div class="contact-right">
+            <div class="tsmall-rc">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet
+                luctus venenatis</div>
+            <div class="form-now">
+                <div class="top-row">
+                    <div class="field-wrap">
+                        <input type="text" id="fname" name="firstname" placeholder="First name" class="name-contact">
+                    </div>
+
+                    <div class="field-wrap">
+                        <input type="text" id="lname" name="lasttname" placeholder="Last name" class="name-contact">
+                    </div>
+                </div>
+
+                <div class="next-row">
+                    <div class="next-wrap">
+                        <input type="email" placeholder="Email address" class="name-contact">
+                    </div>
+
+                    <div class="next-wrap">
+                        <input type="text" placeholder="Subject message" class="name-contact">
+                    </div>
+
+                    <div class="next-wrap">
+                        <input type="text" placeholder="Subject message" class="name-contact quiry">
+                    </div>
+
+
+                    <button onclick="successAlert()">Send Message</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="map"><img src="./assets/img/map.png" /></div>
+    <div class="section-contact-info">
+        <div class="text-sci">
+            <div class="title-lc">Get in Touch</div>
+            <div class="content-lc">Get direct handling by us</div>
+            <div class="tsmall-rc">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam.</div>
+        </div>
+        <div class="item-sci">
+            <div class="item-here">
+                <img src="./assets/img/map-marker-alt.png" alt="">
+                <div class="title-lc">Adress</div>
+                <div class="content-lc text-item1">101 Baker Street, NY</div>
+                <div class="tsmall-rc text-item2">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit</div>
+            </div>
+            
+            <div class="item-here">
+                <img src="./assets/img/Vector (1).png" alt="">
+                <div class="title-lc">Phone</div>
+                <div class="content-lc text-item1">+896 120 5889</div>
+                <div class="tsmall-rc text-item2">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit</div>
+            </div>
+
+            <div class="item-here">
+                <img src="./assets/img/mail-bulk.png" alt="">
+                <div class="title-lc">Mail</div>
+                <div class="content-lc text-item1">mail@company.com</div>
+                <div class="tsmall-rc text-item2">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit</div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <div w3-include-html="./footer.html"></div> 
+
+    <script>
+    includeHTML();
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<script>
+    function includeHTML() {
+        var z, i, elmnt, file, xhttp;
+        /*loop through a collection of all HTML elements:*/
+        z = document.getElementsByTagName("*");
+        for (i = 0; i < z.length; i++) {
+            elmnt = z[i];
+            /*search for elements with a certain attribute:*/
+            file = elmnt.getAttribute("w3-include-html");
+            if (file) {
+                /*make an HTTP request using the attribute value as the file name:*/
+                xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function () {
+                    if (this.readyState == 4) {
+                        if (this.status == 200) { elmnt.innerHTML = this.responseText; }
+                        if (this.status == 404) { elmnt.innerHTML = "Page not found."; }
+                        /*remove the attribute, and call this function once more:*/
+                        elmnt.removeAttribute("w3-include-html");
+                        includeHTML();
+                    }
+                }
+                xhttp.open("GET", file, true);
+                xhttp.send();
+                /*exit the function:*/
+                return;
+            }
+        }
+    };
+    function successAlert() {
+        alert(" Gửi contact thành công !");
+    }
+</script>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, 
+    initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/blog.css">
+    <link rel="stylesheet" href="./assets/contact.css">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Poppins" />
+    <title>Contact</title>
+
+</head>
+
+<div>
+    <div class="gallery">
+        <div class="site-header">
+            <div class="main-logo">
+                <div class="img-logo"> <img src="./assets/img/Main Logo.svg" alt="logo"> </div>
+                <div class="beautice2">
+                    Beautice</div>
+            </div>
+
+            <div class="main-menu">
+                <div class="blog2">Blog</div>
+
+                <div class="gallery3">Gallery</div>
+
+                <div class="service">Service</div>
+
+                <div class="about3">About</div>
+
+                <div class="home3">
+                    <div class="home4">Home</div>
+                </div>
+
+                <div class="contact-button">
+                    <div class="button-bg2"></div>
+
+                    <div class="contact3">Contact</div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="section-title">
+        <div class="desc">
+            <div class="desc-left">Blog</div>
+            <div class="desc-right">Home • Blog</div>
+        </div>
+    </div>
+
+    <div class="blog-content">
+        <div class="blog-left">
+            <div class="article1" id="size">
+                <img src="./assets/img/unsplash_3ewkNkfJj2k (1).png" alt="" style="width:100%;">
+                <div class="padding-item">
+                    <div class="categories">
+                        <img src="./assets/img/folder.png" alt="" style="height:25px; margin-right: 20px;">
+                        <div class="blog-small-text-pink">Consultation</div>
+                    </div>
+                    <div class="blog-title-dark-blue">How much does a consultation cost at our clinic?</div>
+                    <div class="blog-content-gray opacity-text" id="hide">A wonderful serenity has taken possession of my entire soul, like
+                        these
+                        sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of
+                        existence in this spot, which was created for the…</div>
+                    <button class="btn-blog" onclick="hideButton()">Read More <img src="./assets/img/caret-right (1).png" alt=""></button>
+                </div>
+            </div>
+
+            <div class="article1" id="size1">
+                <img src="./assets/img/unsplash_7tDGb3HrITg.png" alt="" style="width:100%;">
+                <div class="padding-item">
+                    <div class="categories">
+                        <img src="./assets/img/folder.png" alt="" style="height:25px; margin-right: 20px;">
+                        <div class="blog-small-text-pink">Beauty</div>
+                    </div>
+                    <div class="blog-title-dark-blue">Watch out! don't choose the wrong beauty product</div>
+                    <div class="blog-content-gray" id="hide1">A wonderful serenity has taken possession of my entire soul, like
+                        these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm
+                        of existence in this spot, which was created for the…</div>
+                    <button class="btn-blog" onclick="hideButton1()">Read More <img src="./assets/img/caret-right (1).png" alt=""></button>
+                </div>
+            </div>
+
+
+            <div class="article1" id="size2">
+                <img src="./assets/img/unsplash_0_McYfdyEDA.png" alt="" style="width:100%;">
+                <div class="padding-item">
+                    <div class="categories">
+                        <img src="./assets/img/folder.png" alt="" style="height:25px; margin-right: 20px;">
+                        <div class="blog-small-text-pink">Treatments</div>
+                    </div>
+                    <div class="blog-title-dark-blue">About skin care you need to know</div>
+                    <div class="blog-content-gray" id="hide2">A wonderful serenity has taken possession of my entire soul, like
+                        these
+                        sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of
+                        existence in this spot, which was created for the…</div>
+                    <button class="btn-blog" onclick="hideButton2()">Read More <img src="./assets/img/caret-right (1).png" alt=""></button>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="blog-right">
+            <div class="search-widget">
+                <input type="text" class="search" alt="" placeholder="Search here...">
+                <button type="submit" class="btn-search"><img src="./assets/img/search.png" alt=""></button>
+
+            </div>
+
+
+            <div class="post">
+                <div class="group-post">
+                    <div class="post-text-dg">Recent Posts</div>
+                    <div class="item-group">
+                        <div class="group-left">
+                            <img src="./assets/img/unsplash_xayCTz6N2nM.png" alt="">
+                            <img src="./assets/img/unsplash_DiJKOYIiNmQ.png" alt="">
+                            <img src="./assets/img/unsplash_yfmjALh1S6s.png" alt="">
+                        </div>
+                        <div class="group-right">
+                            <div class="group-text-pink">01 jan 2021</div>
+                            <div class="group-text-gray">Lorem ipsum dolor sit amet, consectetur adipiscing.</div>
+
+                            <div class="group-text-pink">01 jan 2021</div>
+                            <div class="group-text-gray">Lorem ipsum dolor sit amet, consectetur adipiscing.</div>
+
+                            <div class="group-text-pink">01 jan 2021</div>
+                            <div class="group-text-gray">Lorem ipsum dolor sit amet, consectetur adipiscing.</div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+            <div class="post" style="height:250px;">
+                <div class="group-post">
+                    <div class="post-text-dg">Recent Posts</div>
+                    <div class="short-categories">
+                        <p style="margin-top: 20px;">Consultation</p>
+                        <p>Beauty</p>
+                        <p>Treatments</p>
+                        <p>News</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="post" style="height:280px;">
+                    <div class="group-post">
+                        <div class="post-text-dg">Cloud Tags</div>
+                        <div class="short-categories grid">
+                            <div class="grid-item">beauty</div>
+                            <div class="grid-item">cute</div>
+                            <div class="grid-item">skin</div>
+                            <div class="grid-item">glow</div>
+                            <div class="grid-item">style</div>
+                            <div class="grid-item">greate</div>
+                            <div class="grid-item">here</div>
+                            <div class="grid-item">news</div>
+                            <div class="grid-item">fashion</div>
+                            
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="post" style="height:200px;">
+                        <div class="group-post">
+                            <div class="post-text-dg">Social Connect</div>
+                            <div class="short-categories">
+                                <button class="btn-social"><img src="./assets/img/facebook-ficon-f-dg.png" alt="">
+                                </button>
+                                <button class="btn-social"><img src="./assets/img/instagram (1).png" alt="">
+                                </button>
+                                <button class="btn-social"><img src="./assets/img/twitter (1).png" alt="">
+                                </button>
+                                <button class="btn-social"><img src="./assets/img/linkedin-in.png" alt="">
+                                </button>
+                                </div>
+                            </div>
+                        </div>
+
+            </div>
+        </div>
+
+        <div class="page-navigation">
+            <button class="btn-page">1</button>
+            <button class="btn-page hide">2</button>
+            <button class="btn-page hide">3</button>
+
+        </div>
+
+    <div w3-include-html="./footer.html"></div>
+
+    <script>
+        includeHTML();
+    </script>
+<script>
+    function hideButton() {
+        var x = document.getElementById("hide");
+        var y =  document.getElementById("size");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+          y.style.height = "900px";
+
+        } else {
+          x.style.display = "none";
+          y.style.height = "732px";
+        }
+      }
+
+      function hideButton1() {
+        var x = document.getElementById("hide1");
+        var y =  document.getElementById("size1");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+          y.style.height = "900px";
+
+        } else {
+          x.style.display = "none";
+          y.style.height = "732px";
+        }
+      }
+      function hideButton2() {
+        var x = document.getElementById("hide2");
+        var y =  document.getElementById("size2");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+          y.style.height = "900px";
+
+        } else {
+          x.style.display = "none";
+          y.style.height = "732px";
+        }
+      }
+</script>
+
+    </body>
+
+</html>

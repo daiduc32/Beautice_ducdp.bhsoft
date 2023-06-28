@@ -1,0 +1,248 @@
+.section-title {
+  background-image: url(./img/Background\ Mask.png),
+    url(./img/unsplash_QA9fRIi6sFw.png);
+  width: 100%;
+  height: 285px;
+}
+
+.desc {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.desc-left {
+  color: #fff;
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 125%;
+  margin-top: 140px;
+}
+.desc-right {
+  color: #d9d9d9;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 1.6px;
+  margin-top: 140px;
+}
+
+.blog-content {
+  margin-top: 7%;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-around;
+}
+.padding-item {
+  padding: 52px;
+}
+
+.blog-left {
+  margin-left: 10%;
+  width: 50%;
+}
+
+.blog-right {
+  margin-left: 10%;
+  width: 40%;
+}
+.article1 {
+  width: 100%;
+  height: 732px;
+  border-radius: 0px 0px 50px 50px;
+  background: #fff;
+  box-shadow: 10px 13px 80px 14px #f2f4ff;
+  border-radius: 50px;
+  margin-bottom: 100px;
+}
+.categories {
+  display: flex;
+  align-items: center;
+}
+.blog-small-text-pink {
+  color: #ff64ae;
+  font-size: 16px;
+  font-family: Poppins;
+  font-weight: 600;
+  line-height: 125%;
+}
+.blog-title-dark-blue {
+  margin: 20px 0 20px 0;
+  color: #091156;
+  font-size: 36px;
+  font-family: Poppins;
+  font-weight: 600;
+  line-height: 125%;
+}
+.blog-content-gray {
+  display: none;
+  margin: 20px 0 20px 0;
+  color: #8b8b8b;
+  font-size: 16px;
+  font-family: Poppins;
+  letter-spacing: 1.6px;
+}
+.btn-blog {
+  line-height: 31px;
+  margin: 20px 0 20px 0;
+  background: #ff64ae;
+  border-radius: 50px;
+  width: 158px;
+  height: 52px;
+  position: absolute;
+  font-weight: 600;
+  color: #fff;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-widget {
+  border-radius: 50px;
+  width: 350px;
+  height: 65px;
+  flex-shrink: 0;
+  background: #fff;
+  box-shadow: -2px 4px 31px 9px #f2f4ff;
+  position: relative;
+  display: flex;
+}
+
+.btn-search {
+  border-radius: 0px 50px 50px 0px;
+  background: #172176;
+  width: 76px;
+  height: 65px;
+  border: none;
+}
+input[type="text"] {
+  border-radius: 50px;
+  width: 350px;
+  height: 65px;
+  outline: none;
+  text-align: center;
+}
+
+.search {
+  border: 1px solid #ffff;
+}
+
+.post {
+  margin-top: 75px;
+  width: 350px;
+  height: 471px;
+  border-radius: 25px;
+  background: #fff;
+  box-shadow: -2px 4px 31px 9px #f2f4ff;
+}
+
+.post-text-dg {
+  margin-top: 20px;
+  color: #091156;
+  font-size: 16px;
+  font-family: Poppins;
+  font-weight: 600;
+  line-height: 125%;
+}
+
+.group-post {
+  padding: 32px;
+}
+
+.item-group {
+  display: flex;
+  justify-content: space-around;
+}
+.group-left {
+  width: 30%;
+}
+.group-right {
+  width: 60%;
+}
+.group-left img {
+  margin: 24px 0 12px 0;
+  width: 82px;
+  height: 82px;
+  flex-shrink: 0;
+}
+
+.group-text-pink {
+  margin: 24px 0 12px 0;
+  color: #ff64ae;
+  font-size: 14px;
+  font-family: Poppins;
+  font-weight: 600;
+  letter-spacing: 1.4px;
+}
+.group-text-gray {
+  color: #8b8b8b;
+  font-size: 12px;
+  font-family: Poppins;
+  letter-spacing: 1.2px;
+  margin-bottom: 32px;
+}
+
+.short-categories {
+  color: #8b8b8b;
+  font-size: 14px;
+  font-family: Poppins;
+  letter-spacing: 1.4px;
+}
+.short-categories p {
+  margin: 6px 0 6px 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  margin-top: 12px;
+}
+
+.grid-item {
+  border-radius: 50px;
+  background: #fff;
+  box-shadow: 0px 4px 17px 0px #eef0ff;
+  color: #8b8b8b;
+  font-size: 14px;
+  font-family: Poppins;
+  letter-spacing: 1.4px;
+}
+
+.btn-social {
+  border-radius: 43px;
+  background: #fff;
+  border: none;
+  box-shadow: 0px 4px 19px 11px #f6f7ff;
+  width: 43px;
+  height: 43px;
+  margin: 32px 15px 0 0;
+}
+.padding-item img {
+  align-items: center;
+}
+.page-navigation {
+  text-align: center;
+  height: 135px;
+}
+
+.btn-page {
+  width: 35px;
+  height: 35px;
+  border-radius: 35px;
+  background: #172176;
+  box-shadow: 0px 7px 37px 4px #e6e9ff;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 125%;
+  border: none;
+  cursor: pointer;
+  margin: 0 16px 10px 0;
+}
+.hide {
+  background-color: #fff;
+  color: #c7c7c7;
+}
+

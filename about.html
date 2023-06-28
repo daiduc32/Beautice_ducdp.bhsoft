@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+    <script>
+        function includeHTML() {
+          var z, i, elmnt, file, xhttp;
+          /*loop through a collection of all HTML elements:*/
+          z = document.getElementsByTagName("*");
+          for (i = 0; i < z.length; i++) {
+            elmnt = z[i];
+            /*search for elements with a certain attribute:*/
+            file = elmnt.getAttribute("w3-include-html");
+            if (file) {
+              /*make an HTTP request using the attribute value as the file name:*/
+              xhttp = new XMLHttpRequest();
+              xhttp.onreadystatechange = function() {
+                if (this.readyState == 4) {
+                  if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+                  if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+                  /*remove the attribute, and call this function once more:*/
+                  elmnt.removeAttribute("w3-include-html");
+                  includeHTML();
+                }
+              }      
+              xhttp.open("GET", file, true);
+              xhttp.send();
+              /*exit the function:*/
+              return;
+            }
+          }
+        };
+        function successAlert() {
+            alert(" Gửi contact thành công !");
+        }
+        </script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/contact.css">
+    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Poppins" />
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="gallery">
+
+
+        <div class="site-header">
+            <div class="main-logo">
+                <div class="ellipse-bg2"></div>
+
+                <div class="rectangle-blue2"></div>
+
+                <div class="ellipse-white-22"></div>
+
+                <div class="ellipse-white-12"></div>
+
+                <div class="beautice2">Beautice</div>
+            </div>
+
+            <div class="main-menu">
+                <div class="blog2">Blog</div>
+
+                <div class="gallery3">Gallery</div>
+
+                <div class="service">Service</div>
+
+                <div class="about3">About</div>
+
+                <div class="home3">
+                    <div class="home4">Home</div>
+                </div>
+
+                <div class="contact-button">
+                    <div class="button-bg2"></div>
+
+                    <div class="contact3">Contact</div>
+                </div>
+
+            </div>
+        </div>  
+    </div>
+
+    <div class="section-about">
+        <div class="title-small-pink">About</div>
+        <div class="content-big-blue">We are a leading beauty clinic that has been around since 2002</div>
+        <div class="detail-small-gray">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis</div>
+        <img src="./assets/img/about--section.png" alt="" style="width:100%;">
+        <img src="./assets/img/Play Button (2).png" alt="" class="playbtn">
+    </div>
+
+    <div class="text-sci" style="margin-top: 136px;">
+        <div class="title-lc">Our Services</div>
+        <div class="content-lc">We focus on your beauty</div>
+        <div class="tsmall-rc">Lorem ipsum dolor sit amet.</div>
+    </div>
+
+    <div class="box-section professional">
+        <div class="box-left none more-hight">
+            <img src="./assets/img/people1.png" alt="" class="img-sec">
+            <div class="pink-text">Surgeon</div>
+            <div class="box-title text-professional">Briyan Nevalli</div>
+            <div class="box-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus
+                sit</div>
+            <div class="icon-profess">
+                <button class="btn-icon"><img src="./assets/img/twitter.png" alt="twitter"></button>
+                <button class="btn-icon"><img src="./assets/img/fb.png" alt="facebook"></button>
+                <button class="btn-icon"><img src="./assets/img/instagram.png" alt="instagram"></button>
+
+            </div>
+        </div>
+        <div class="box-mid more-hight">
+            <img src="./assets/img/people2.png" alt="" class="img-sec">
+            <div class="pink-text">Surgeon</div>
+            <div class="box-title text-professional">Bella sebastian</div>
+            <div class="box-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus
+                sit</div>
+            <div class="icon-profess">
+                <button class="btn-icon"><img src="./assets/img/twitter.png" alt="twitter"></button>
+                <button class="btn-icon"><img src="./assets/img/fb.png" alt="facebook"></button>
+                <button class="btn-icon"><img src="./assets/img/instagram.png" alt="instagram"></button>
+
+            </div>
+        </div>
+
+        <div class="box-right none more-hight">
+            <img src="./assets/img/people3.png" alt="" class="img-sec">
+            <div class="pink-text">Surgeon</div>
+            <div class="box-title text-professional">Lilly Adams</div>
+            <div class="box-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus
+                sit</div>
+            <div class="icon-profess">
+                <button class="btn-icon"><img src="./assets/img/twitter.png" alt="twitter"></button>
+                <button class="btn-icon"><img src="./assets/img/fb.png" alt="facebook"></button>
+                <button class="btn-icon"><img src="./assets/img/instagram.png" alt="instagram"></button>
+
+            </div>
+
+        </div>
+    </div>
+    <div w3-include-html="./footer.html"></div> 
+
+    <script>
+    includeHTML();
+    </script>
+
+    <style>
+
+        .playbtn {
+            position: absolute;
+            margin: 0 auto;
+            left: 50%;
+            padding-top: 260px;
+            width: 88px;
+            height: 88px;
+
+        }
+
+        .playbtn:hover {
+            width: 98px;
+            height: 98px;
+            opacity: 0.5;
+        }
+
+        .detail-small-gray {
+            margin-bottom: 58px;
+            display: flex;
+            flex-direction: column;
+            color: #8B8B8B;
+            font-size: 16px;
+            letter-spacing: 1.6px;
+        }
+
+        .content-big-blue {
+            margin: 12px 0;
+            display: flex;
+            width: 732px;
+            height: 97px;
+            flex-direction: column;
+            font-size: 36px;
+            font-weight: 600;
+            line-height: 125%;
+            color: #091156;
+        }
+
+        .title-small-pink {
+            color: #FF64AE;
+            flex-direction: column;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 125%;
+            ;
+        }
+
+        .section-about {
+            margin: 0 150px 0 150px;
+        }
+
+        .section-about .img {
+            width: 1140px;
+            height: 540px;
+            
+        }
+
+        body,
+        html {
+            height:100%;
+            margin: 0;
+            padding: 0;
+            font-family: "Poppins", serif;
+        }
+
+        .gallery {
+            background-color: #ffffff;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .site-header {
+            position: absolute;
+            inset: 0;
+        }
+
+        .contact-button {
+            width: 158px;
+            height: 52px;
+            position: static;
+        }
+
+        .button-bg2 {
+            background: #ff64ae;
+            border-radius: 50px;
+            width: 158px;
+            height: 52px;
+            position: absolute;
+            left: 1132px;
+            top: 45px;
+        }
+
+        .contact3 {
+            color: #ffffff;
+            text-align: left;
+            font: 600 16px "Poppins", sans-serif;
+            position: absolute;
+            left: 1173px;
+            top: 59px;
+        }
+
+        .main-menu {
+            width: 481px;
+            height: 24px;
+            position: static;
+        }
+
+        .blog2 {
+            color: #8b8b8b;
+            text-align: left;
+            font: 500 16px "Poppins", sans-serif;
+            position: absolute;
+            left: 1039px;
+            top: 59px;
+        }
+
+        .gallery3 {
+            color: #8b8b8b;
+            text-align: left;
+            font: 500 16px "Poppins", sans-serif;
+            position: absolute;
+            left: 925px;
+            top: 59px;
+        }
+
+        .service {
+            color: #8b8b8b;
+            text-align: left;
+            font: 500 16px "Poppins", sans-serif;
+            position: absolute;
+            left: 810px;
+            top: 59px;
+        }
+
+        .about3 {
+            color: #8b8b8b;
+            text-align: left;
+            font: 500 16px "Poppins", sans-serif;
+            position: absolute;
+            left: 710px;
+            top: 59px;
+        }
+
+        .home3 {
+            width: 66px;
+            height: 24px;
+            position: static;
+        }
+
+        .plus-icon {
+            position: absolute;
+            left: 658px;
+            top: 69px;
+            overflow: visible;
+        }
+
+        .home4 {
+            color: #414880;
+            text-align: left;
+            font: 600 16px "Poppins", sans-serif;
+            position: absolute;
+            left: 599px;
+            top: 59px;
+        }
+
+        .main-logo {
+            width: 258px;
+            height: 63px;
+            position: static;
+        }
+
+        .ellipse-bg2 {
+            background: #ff64ae;
+            border-radius: 50%;
+            width: 63px;
+            height: 63px;
+            position: absolute;
+            left: 150px;
+            top: 41px;
+        }
+
+        .rectangle-blue2 {
+            background: #091156;
+            border-radius: 50px;
+            width: 40px;
+            height: 11px;
+            position: absolute;
+            left: 189px;
+            top: 67px;
+        }
+
+        .ellipse-white-22 {
+            background: #ffffff;
+            border-radius: 50%;
+            width: 6px;
+            height: 6px;
+            position: absolute;
+            left: 175px;
+            top: 64px;
+        }
+
+        .ellipse-white-12 {
+            background: #ffffff;
+            border-radius: 50%;
+            width: 13px;
+            height: 13px;
+            position: absolute;
+            left: 162px;
+            top: 52px;
+        }
+
+        .beautice2 {
+            color: #091156;
+            text-align: left;
+            font: 700 24px "Poppins", sans-serif;
+            position: absolute;
+            left: 247px;
+            top: 55px;
+            width: 161px;
+            height: 34px;
+        }
+
+        @media screen and (min-width:1500px) {
+            * {
+                margin: 0 auto;
+            }
+        }
+    </style>
+</body>
+
+</html>
