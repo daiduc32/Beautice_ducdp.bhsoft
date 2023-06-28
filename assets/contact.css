@@ -38,6 +38,7 @@ body {
   left: 1132px;
   top: 45px;
 }
+
 .bg-bubble {
   position: absolute;
   background-image: url(./img/Background\ Bubble.png);
@@ -618,7 +619,6 @@ word-wrap: break-word;
 }
 
 .hide {
-  display: none;
   margin-top: 24px;
 }
 
@@ -664,13 +664,14 @@ margin-top: 12px;
 }
 
 .section-our-services {
-  margin-top: 32px;
-  display: grid;
-  grid-template-columns: auto auto;
+  display: flex;
+  justify-content: center;
+  
 }
 
 .grid-item-services {
   border-radius: 25px;
+  margin: 32px 32px 0 0;
 }
 .consultation {
   margin: 54px;
