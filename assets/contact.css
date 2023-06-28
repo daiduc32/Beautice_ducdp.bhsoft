@@ -621,7 +621,9 @@ word-wrap: break-word;
 .hide {
   margin-top: 24px;
 }
-
+.hide-element {
+  display: none;
+}
 .section-slogan {
   background-image: url(./img/Background\ Mask.png),
     url(./img/unsplash_NPjNtTExSJ4.png);
