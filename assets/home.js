@@ -98,3 +98,13 @@ function hideButton() {
         document.body.scrollTop = 0;
         document.documentElement.scrollTop = 0;
       }
+
+      function subMenu() {
+        var x = document.getElementById("submenu");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+
+        } else {
+          x.style.display = "none";
+        }
+      }

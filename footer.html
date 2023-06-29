@@ -1,6 +1,6 @@
 <div class="footer">
     <div class="left-footer">
-        <div class="title-footer">Beautice</div>
+        <div class="title-footer"><img src="./assets/img/Footer Logo.png" alt="logo"> Beautice</div>
         <div class="content-footer"><b>Beautice</b> is a Beauty Clinic WordPress Theme.</div>
         <div class="address">Baker Steet 101, NY, United States.</div>
         <div class="infor">
@@ -23,7 +23,8 @@
         <div class="item-page"><img src="./assets/img/caret-right.png" alt=""> Condivacy Policy</div>
         <div class="item-page"><img src="./assets/img/caret-right.png" alt=""> Blog</div>
         <div class="item-page"><img src="./assets/img/caret-right.png" alt=""> Contact</div>
-        <button class="arrow-top" onclick="topFunction()" id="myBtn" title="Go to top"><img src="./assets/img/arrow.png" alt="arrow-top"></button>
+        <button class="arrow-top" onclick="topFunction()" id="myBtn" title="Go to top"><img src="./assets/img/arrow.png"
+                alt="arrow-top"></button>
     </div>
 </div>
 <div class="bottom-footer">
@@ -63,6 +64,8 @@
     }
 
     .title-footer {
+        display: flex;
+        align-items: center;
         font-weight: 700;
         font-size: 24px;
         line-height: 36px;
@@ -71,13 +74,17 @@
         color: #ffffff;
     }
 
+    .title-footer img {
+        margin-right: 12px;
+    }
+
     .content-footer {
         font-weight: 400;
         font-size: 16px;
         line-height: 24px;
-        letter-spacing: 0.1em;
         color: #d7dbff;
         margin-bottom: 26px;
+        letter-spacing: 1.6px;
     }
 
     .address {
@@ -168,8 +175,9 @@
         right: 5%;
         opacity: 0.5;
     }
+
     .arrow-top:hover {
         transition: 0.3s;
-        opacity:unset;
+        opacity: unset;
     }
 </style>
